@@ -14,9 +14,14 @@ function fetchSimpsonsJSON() {
           <p><strong>${simpsons[0].character}</strong></p>
           <img src="${simpsons[0].image}" />
           <q>${simpsons[0].quote}</q>
+    
         `;
             document.querySelector('#simpsons').innerHTML = simpsonsHtml;
         });
 }
 
 fetchSimpsonsJSON();
+
+document.getElementById("myBtn").addEventListener("click", function() {
+    fetchSimpsonsJSON();
+});
